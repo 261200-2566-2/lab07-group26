@@ -1,10 +1,11 @@
+/** Import HashMap class */
 import java.util.HashMap;
+/** Import important interface */
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 
 public class mySet<E> implements Set<E>{
-//    HashMap<E, Object> m = new HashMap<>();
     HashMap<E, Boolean> hmap = new HashMap<>();
 
     @Override
@@ -39,20 +40,11 @@ public class mySet<E> implements Set<E>{
 
     @Override
     public boolean containsAll(Collection<?> c) {
-//        for(Object val : c){
-//            if(!contains(val)){ return false; }
-//        }
-//        return true;
         return hmap.keySet().containsAll(c);
     }
 
     @Override
     public boolean addAll(Collection<? extends E> c){
-//        boolean flag = false;
-//        for(E val : c){
-//            if(add(val)) { flag = true; }
-//        }
-//        return flag;
         return hmap.keySet().addAll(c);
     }
 
